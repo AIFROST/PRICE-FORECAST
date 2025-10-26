@@ -1,0 +1,34 @@
+name: Fetch Vividfog Prediction File
+
+on:
+  # Ajetaan tunnin välein
+  schedule:
+    - cron: '0 * * * *'
+  # Mahdollistaa manuaalisen käynnistyksen
+  workflow_dispatch:
+
+# Annetaan kirjoitusoikeudet suoraan tässä
+permissions:
+  contents: write
+
+jobs:
+  fetch-file:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Otetaan repositorion tiedostot käyttöön
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # 2. Ladataan uusi ennustetiedosto
+      - name: Fetch vividfog-prediction.json
+        run: |
+          curl "https://raw.githubusercontent.com/vividfog/nordpool-predict-fi/refs/heads/main/deploy/prediction.json" -o vividfog-prediction.json
+
+      # 3. Tallennetaan tiedosto, jos se on muuttunut
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add vividfog-prediction.json
+          git diff --staged --quiet || git commit -m "Update vividfog-prediction.json"
+          git push
