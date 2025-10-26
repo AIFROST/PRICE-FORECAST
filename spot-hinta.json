@@ -1,0 +1,1178 @@
+[
+  {
+    "Rank": 58,
+    "DateTime": "2025-10-26T00:00:00+03:00",
+    "PriceNoTax": 0.004,
+    "PriceWithTax": 0.00502
+  },
+  {
+    "Rank": 56,
+    "DateTime": "2025-10-26T00:15:00+03:00",
+    "PriceNoTax": 0.00396,
+    "PriceWithTax": 0.00497
+  },
+  {
+    "Rank": 46,
+    "DateTime": "2025-10-26T00:30:00+03:00",
+    "PriceNoTax": 0.00334,
+    "PriceWithTax": 0.00419
+  },
+  {
+    "Rank": 44,
+    "DateTime": "2025-10-26T00:45:00+03:00",
+    "PriceNoTax": 0.00319,
+    "PriceWithTax": 0.00400
+  },
+  {
+    "Rank": 33,
+    "DateTime": "2025-10-26T01:00:00+03:00",
+    "PriceNoTax": 0.003,
+    "PriceWithTax": 0.00376
+  },
+  {
+    "Rank": 42,
+    "DateTime": "2025-10-26T01:15:00+03:00",
+    "PriceNoTax": 0.00312,
+    "PriceWithTax": 0.00392
+  },
+  {
+    "Rank": 34,
+    "DateTime": "2025-10-26T01:30:00+03:00",
+    "PriceNoTax": 0.003,
+    "PriceWithTax": 0.00376
+  },
+  {
+    "Rank": 37,
+    "DateTime": "2025-10-26T01:45:00+03:00",
+    "PriceNoTax": 0.00302,
+    "PriceWithTax": 0.00379
+  },
+  {
+    "Rank": 45,
+    "DateTime": "2025-10-26T02:00:00+03:00",
+    "PriceNoTax": 0.00323,
+    "PriceWithTax": 0.00405
+  },
+  {
+    "Rank": 38,
+    "DateTime": "2025-10-26T02:15:00+03:00",
+    "PriceNoTax": 0.00308,
+    "PriceWithTax": 0.00387
+  },
+  {
+    "Rank": 39,
+    "DateTime": "2025-10-26T02:30:00+03:00",
+    "PriceNoTax": 0.00308,
+    "PriceWithTax": 0.00387
+  },
+  {
+    "Rank": 28,
+    "DateTime": "2025-10-26T02:45:00+03:00",
+    "PriceNoTax": 0.00282,
+    "PriceWithTax": 0.00354
+  },
+  {
+    "Rank": 40,
+    "DateTime": "2025-10-26T03:00:00+03:00",
+    "PriceNoTax": 0.00308,
+    "PriceWithTax": 0.00387
+  },
+  {
+    "Rank": 27,
+    "DateTime": "2025-10-26T03:15:00+03:00",
+    "PriceNoTax": 0.00279,
+    "PriceWithTax": 0.00350
+  },
+  {
+    "Rank": 25,
+    "DateTime": "2025-10-26T03:30:00+03:00",
+    "PriceNoTax": 0.0026,
+    "PriceWithTax": 0.00326
+  },
+  {
+    "Rank": 20,
+    "DateTime": "2025-10-26T03:45:00+03:00",
+    "PriceNoTax": 0.00218,
+    "PriceWithTax": 0.00274
+  },
+  {
+    "Rank": 24,
+    "DateTime": "2025-10-26T03:00:00+02:00",
+    "PriceNoTax": 0.00254,
+    "PriceWithTax": 0.00319
+  },
+  {
+    "Rank": 21,
+    "DateTime": "2025-10-26T03:15:00+02:00",
+    "PriceNoTax": 0.00226,
+    "PriceWithTax": 0.00284
+  },
+  {
+    "Rank": 18,
+    "DateTime": "2025-10-26T03:30:00+02:00",
+    "PriceNoTax": 0.00201,
+    "PriceWithTax": 0.00252
+  },
+  {
+    "Rank": 11,
+    "DateTime": "2025-10-26T03:45:00+02:00",
+    "PriceNoTax": 0.00126,
+    "PriceWithTax": 0.00158
+  },
+  {
+    "Rank": 13,
+    "DateTime": "2025-10-26T04:00:00+02:00",
+    "PriceNoTax": 0.00142,
+    "PriceWithTax": 0.00178
+  },
+  {
+    "Rank": 7,
+    "DateTime": "2025-10-26T04:15:00+02:00",
+    "PriceNoTax": 0.00111,
+    "PriceWithTax": 0.00139
+  },
+  {
+    "Rank": 6,
+    "DateTime": "2025-10-26T04:30:00+02:00",
+    "PriceNoTax": 0.00101,
+    "PriceWithTax": 0.00127
+  },
+  {
+    "Rank": 3,
+    "DateTime": "2025-10-26T04:45:00+02:00",
+    "PriceNoTax": 0.0005,
+    "PriceWithTax": 0.00063
+  },
+  {
+    "Rank": 9,
+    "DateTime": "2025-10-26T05:00:00+02:00",
+    "PriceNoTax": 0.00123,
+    "PriceWithTax": 0.00154
+  },
+  {
+    "Rank": 1,
+    "DateTime": "2025-10-26T05:15:00+02:00",
+    "PriceNoTax": 0.00047,
+    "PriceWithTax": 0.00059
+  },
+  {
+    "Rank": 2,
+    "DateTime": "2025-10-26T05:30:00+02:00",
+    "PriceNoTax": 0.00048,
+    "PriceWithTax": 0.00060
+  },
+  {
+    "Rank": 4,
+    "DateTime": "2025-10-26T05:45:00+02:00",
+    "PriceNoTax": 0.00068,
+    "PriceWithTax": 0.00085
+  },
+  {
+    "Rank": 5,
+    "DateTime": "2025-10-26T06:00:00+02:00",
+    "PriceNoTax": 0.00069,
+    "PriceWithTax": 0.00087
+  },
+  {
+    "Rank": 8,
+    "DateTime": "2025-10-26T06:15:00+02:00",
+    "PriceNoTax": 0.00121,
+    "PriceWithTax": 0.00152
+  },
+  {
+    "Rank": 10,
+    "DateTime": "2025-10-26T06:30:00+02:00",
+    "PriceNoTax": 0.00124,
+    "PriceWithTax": 0.00156
+  },
+  {
+    "Rank": 12,
+    "DateTime": "2025-10-26T06:45:00+02:00",
+    "PriceNoTax": 0.00127,
+    "PriceWithTax": 0.00159
+  },
+  {
+    "Rank": 14,
+    "DateTime": "2025-10-26T07:00:00+02:00",
+    "PriceNoTax": 0.00144,
+    "PriceWithTax": 0.00181
+  },
+  {
+    "Rank": 15,
+    "DateTime": "2025-10-26T07:15:00+02:00",
+    "PriceNoTax": 0.00158,
+    "PriceWithTax": 0.00198
+  },
+  {
+    "Rank": 16,
+    "DateTime": "2025-10-26T07:30:00+02:00",
+    "PriceNoTax": 0.00167,
+    "PriceWithTax": 0.00210
+  },
+  {
+    "Rank": 17,
+    "DateTime": "2025-10-26T07:45:00+02:00",
+    "PriceNoTax": 0.002,
+    "PriceWithTax": 0.00251
+  },
+  {
+    "Rank": 19,
+    "DateTime": "2025-10-26T08:00:00+02:00",
+    "PriceNoTax": 0.00207,
+    "PriceWithTax": 0.00260
+  },
+  {
+    "Rank": 22,
+    "DateTime": "2025-10-26T08:15:00+02:00",
+    "PriceNoTax": 0.00241,
+    "PriceWithTax": 0.00302
+  },
+  {
+    "Rank": 23,
+    "DateTime": "2025-10-26T08:30:00+02:00",
+    "PriceNoTax": 0.00248,
+    "PriceWithTax": 0.00311
+  },
+  {
+    "Rank": 26,
+    "DateTime": "2025-10-26T08:45:00+02:00",
+    "PriceNoTax": 0.0027,
+    "PriceWithTax": 0.00339
+  },
+  {
+    "Rank": 31,
+    "DateTime": "2025-10-26T09:00:00+02:00",
+    "PriceNoTax": 0.00299,
+    "PriceWithTax": 0.00375
+  },
+  {
+    "Rank": 36,
+    "DateTime": "2025-10-26T09:15:00+02:00",
+    "PriceNoTax": 0.00301,
+    "PriceWithTax": 0.00378
+  },
+  {
+    "Rank": 41,
+    "DateTime": "2025-10-26T09:30:00+02:00",
+    "PriceNoTax": 0.00309,
+    "PriceWithTax": 0.00388
+  },
+  {
+    "Rank": 43,
+    "DateTime": "2025-10-26T09:45:00+02:00",
+    "PriceNoTax": 0.00318,
+    "PriceWithTax": 0.00399
+  },
+  {
+    "Rank": 29,
+    "DateTime": "2025-10-26T10:00:00+02:00",
+    "PriceNoTax": 0.00288,
+    "PriceWithTax": 0.00361
+  },
+  {
+    "Rank": 30,
+    "DateTime": "2025-10-26T10:15:00+02:00",
+    "PriceNoTax": 0.00292,
+    "PriceWithTax": 0.00366
+  },
+  {
+    "Rank": 32,
+    "DateTime": "2025-10-26T10:30:00+02:00",
+    "PriceNoTax": 0.00299,
+    "PriceWithTax": 0.00375
+  },
+  {
+    "Rank": 35,
+    "DateTime": "2025-10-26T10:45:00+02:00",
+    "PriceNoTax": 0.003,
+    "PriceWithTax": 0.00376
+  },
+  {
+    "Rank": 47,
+    "DateTime": "2025-10-26T11:00:00+02:00",
+    "PriceNoTax": 0.00338,
+    "PriceWithTax": 0.00424
+  },
+  {
+    "Rank": 50,
+    "DateTime": "2025-10-26T11:15:00+02:00",
+    "PriceNoTax": 0.00352,
+    "PriceWithTax": 0.00442
+  },
+  {
+    "Rank": 49,
+    "DateTime": "2025-10-26T11:30:00+02:00",
+    "PriceNoTax": 0.00348,
+    "PriceWithTax": 0.00437
+  },
+  {
+    "Rank": 48,
+    "DateTime": "2025-10-26T11:45:00+02:00",
+    "PriceNoTax": 0.00344,
+    "PriceWithTax": 0.00432
+  },
+  {
+    "Rank": 51,
+    "DateTime": "2025-10-26T12:00:00+02:00",
+    "PriceNoTax": 0.00383,
+    "PriceWithTax": 0.00481
+  },
+  {
+    "Rank": 52,
+    "DateTime": "2025-10-26T12:15:00+02:00",
+    "PriceNoTax": 0.00386,
+    "PriceWithTax": 0.00484
+  },
+  {
+    "Rank": 53,
+    "DateTime": "2025-10-26T12:30:00+02:00",
+    "PriceNoTax": 0.00389,
+    "PriceWithTax": 0.00488
+  },
+  {
+    "Rank": 59,
+    "DateTime": "2025-10-26T12:45:00+02:00",
+    "PriceNoTax": 0.004,
+    "PriceWithTax": 0.00502
+  },
+  {
+    "Rank": 54,
+    "DateTime": "2025-10-26T13:00:00+02:00",
+    "PriceNoTax": 0.00389,
+    "PriceWithTax": 0.00488
+  },
+  {
+    "Rank": 55,
+    "DateTime": "2025-10-26T13:15:00+02:00",
+    "PriceNoTax": 0.00395,
+    "PriceWithTax": 0.00496
+  },
+  {
+    "Rank": 57,
+    "DateTime": "2025-10-26T13:30:00+02:00",
+    "PriceNoTax": 0.00399,
+    "PriceWithTax": 0.00501
+  },
+  {
+    "Rank": 60,
+    "DateTime": "2025-10-26T13:45:00+02:00",
+    "PriceNoTax": 0.00432,
+    "PriceWithTax": 0.00542
+  },
+  {
+    "Rank": 61,
+    "DateTime": "2025-10-26T14:00:00+02:00",
+    "PriceNoTax": 0.00453,
+    "PriceWithTax": 0.00569
+  },
+  {
+    "Rank": 62,
+    "DateTime": "2025-10-26T14:15:00+02:00",
+    "PriceNoTax": 0.00461,
+    "PriceWithTax": 0.00579
+  },
+  {
+    "Rank": 65,
+    "DateTime": "2025-10-26T14:30:00+02:00",
+    "PriceNoTax": 0.0049,
+    "PriceWithTax": 0.00615
+  },
+  {
+    "Rank": 67,
+    "DateTime": "2025-10-26T14:45:00+02:00",
+    "PriceNoTax": 0.00504,
+    "PriceWithTax": 0.00633
+  },
+  {
+    "Rank": 63,
+    "DateTime": "2025-10-26T15:00:00+02:00",
+    "PriceNoTax": 0.00478,
+    "PriceWithTax": 0.00600
+  },
+  {
+    "Rank": 66,
+    "DateTime": "2025-10-26T15:15:00+02:00",
+    "PriceNoTax": 0.005,
+    "PriceWithTax": 0.00628
+  },
+  {
+    "Rank": 68,
+    "DateTime": "2025-10-26T15:30:00+02:00",
+    "PriceNoTax": 0.00558,
+    "PriceWithTax": 0.00700
+  },
+  {
+    "Rank": 72,
+    "DateTime": "2025-10-26T15:45:00+02:00",
+    "PriceNoTax": 0.00727,
+    "PriceWithTax": 0.00912
+  },
+  {
+    "Rank": 64,
+    "DateTime": "2025-10-26T16:00:00+02:00",
+    "PriceNoTax": 0.00481,
+    "PriceWithTax": 0.00604
+  },
+  {
+    "Rank": 69,
+    "DateTime": "2025-10-26T16:15:00+02:00",
+    "PriceNoTax": 0.00644,
+    "PriceWithTax": 0.00808
+  },
+  {
+    "Rank": 70,
+    "DateTime": "2025-10-26T16:30:00+02:00",
+    "PriceNoTax": 0.007,
+    "PriceWithTax": 0.00878
+  },
+  {
+    "Rank": 76,
+    "DateTime": "2025-10-26T16:45:00+02:00",
+    "PriceNoTax": 0.01062,
+    "PriceWithTax": 0.01333
+  },
+  {
+    "Rank": 71,
+    "DateTime": "2025-10-26T17:00:00+02:00",
+    "PriceNoTax": 0.00719,
+    "PriceWithTax": 0.00902
+  },
+  {
+    "Rank": 74,
+    "DateTime": "2025-10-26T17:15:00+02:00",
+    "PriceNoTax": 0.00943,
+    "PriceWithTax": 0.01183
+  },
+  {
+    "Rank": 84,
+    "DateTime": "2025-10-26T17:30:00+02:00",
+    "PriceNoTax": 0.01278,
+    "PriceWithTax": 0.01604
+  },
+  {
+    "Rank": 93,
+    "DateTime": "2025-10-26T17:45:00+02:00",
+    "PriceNoTax": 0.01797,
+    "PriceWithTax": 0.02255
+  },
+  {
+    "Rank": 81,
+    "DateTime": "2025-10-26T18:00:00+02:00",
+    "PriceNoTax": 0.01226,
+    "PriceWithTax": 0.01539
+  },
+  {
+    "Rank": 87,
+    "DateTime": "2025-10-26T18:15:00+02:00",
+    "PriceNoTax": 0.01404,
+    "PriceWithTax": 0.01762
+  },
+  {
+    "Rank": 94,
+    "DateTime": "2025-10-26T18:30:00+02:00",
+    "PriceNoTax": 0.02329,
+    "PriceWithTax": 0.02923
+  },
+  {
+    "Rank": 98,
+    "DateTime": "2025-10-26T18:45:00+02:00",
+    "PriceNoTax": 0.02671,
+    "PriceWithTax": 0.03352
+  },
+  {
+    "Rank": 99,
+    "DateTime": "2025-10-26T19:00:00+02:00",
+    "PriceNoTax": 0.02691,
+    "PriceWithTax": 0.03377
+  },
+  {
+    "Rank": 97,
+    "DateTime": "2025-10-26T19:15:00+02:00",
+    "PriceNoTax": 0.0247,
+    "PriceWithTax": 0.03100
+  },
+  {
+    "Rank": 100,
+    "DateTime": "2025-10-26T19:30:00+02:00",
+    "PriceNoTax": 0.02884,
+    "PriceWithTax": 0.03619
+  },
+  {
+    "Rank": 88,
+    "DateTime": "2025-10-26T19:45:00+02:00",
+    "PriceNoTax": 0.01426,
+    "PriceWithTax": 0.01790
+  },
+  {
+    "Rank": 96,
+    "DateTime": "2025-10-26T20:00:00+02:00",
+    "PriceNoTax": 0.02454,
+    "PriceWithTax": 0.03080
+  },
+  {
+    "Rank": 95,
+    "DateTime": "2025-10-26T20:15:00+02:00",
+    "PriceNoTax": 0.024,
+    "PriceWithTax": 0.03012
+  },
+  {
+    "Rank": 92,
+    "DateTime": "2025-10-26T20:30:00+02:00",
+    "PriceNoTax": 0.01762,
+    "PriceWithTax": 0.02211
+  },
+  {
+    "Rank": 90,
+    "DateTime": "2025-10-26T20:45:00+02:00",
+    "PriceNoTax": 0.01539,
+    "PriceWithTax": 0.01931
+  },
+  {
+    "Rank": 91,
+    "DateTime": "2025-10-26T21:00:00+02:00",
+    "PriceNoTax": 0.0156,
+    "PriceWithTax": 0.01958
+  },
+  {
+    "Rank": 89,
+    "DateTime": "2025-10-26T21:15:00+02:00",
+    "PriceNoTax": 0.01456,
+    "PriceWithTax": 0.01827
+  },
+  {
+    "Rank": 86,
+    "DateTime": "2025-10-26T21:30:00+02:00",
+    "PriceNoTax": 0.01357,
+    "PriceWithTax": 0.01703
+  },
+  {
+    "Rank": 80,
+    "DateTime": "2025-10-26T21:45:00+02:00",
+    "PriceNoTax": 0.01192,
+    "PriceWithTax": 0.01496
+  },
+  {
+    "Rank": 85,
+    "DateTime": "2025-10-26T22:00:00+02:00",
+    "PriceNoTax": 0.01292,
+    "PriceWithTax": 0.01621
+  },
+  {
+    "Rank": 82,
+    "DateTime": "2025-10-26T22:15:00+02:00",
+    "PriceNoTax": 0.01246,
+    "PriceWithTax": 0.01564
+  },
+  {
+    "Rank": 79,
+    "DateTime": "2025-10-26T22:30:00+02:00",
+    "PriceNoTax": 0.01191,
+    "PriceWithTax": 0.01495
+  },
+  {
+    "Rank": 75,
+    "DateTime": "2025-10-26T22:45:00+02:00",
+    "PriceNoTax": 0.01003,
+    "PriceWithTax": 0.01259
+  },
+  {
+    "Rank": 83,
+    "DateTime": "2025-10-26T23:00:00+02:00",
+    "PriceNoTax": 0.01249,
+    "PriceWithTax": 0.01567
+  },
+  {
+    "Rank": 77,
+    "DateTime": "2025-10-26T23:15:00+02:00",
+    "PriceNoTax": 0.01166,
+    "PriceWithTax": 0.01463
+  },
+  {
+    "Rank": 78,
+    "DateTime": "2025-10-26T23:30:00+02:00",
+    "PriceNoTax": 0.01167,
+    "PriceWithTax": 0.01465
+  },
+  {
+    "Rank": 73,
+    "DateTime": "2025-10-26T23:45:00+02:00",
+    "PriceNoTax": 0.00792,
+    "PriceWithTax": 0.00994
+  },
+  {
+    "Rank": 25,
+    "DateTime": "2025-10-27T00:00:00+02:00",
+    "PriceNoTax": 0.00703,
+    "PriceWithTax": 0.00882
+  },
+  {
+    "Rank": 27,
+    "DateTime": "2025-10-27T00:15:00+02:00",
+    "PriceNoTax": 0.00967,
+    "PriceWithTax": 0.01214
+  },
+  {
+    "Rank": 22,
+    "DateTime": "2025-10-27T00:30:00+02:00",
+    "PriceNoTax": 0.0053,
+    "PriceWithTax": 0.00665
+  },
+  {
+    "Rank": 7,
+    "DateTime": "2025-10-27T00:45:00+02:00",
+    "PriceNoTax": 0.00468,
+    "PriceWithTax": 0.00587
+  },
+  {
+    "Rank": 21,
+    "DateTime": "2025-10-27T01:00:00+02:00",
+    "PriceNoTax": 0.00513,
+    "PriceWithTax": 0.00644
+  },
+  {
+    "Rank": 20,
+    "DateTime": "2025-10-27T01:15:00+02:00",
+    "PriceNoTax": 0.00512,
+    "PriceWithTax": 0.00643
+  },
+  {
+    "Rank": 9,
+    "DateTime": "2025-10-27T01:30:00+02:00",
+    "PriceNoTax": 0.00481,
+    "PriceWithTax": 0.00604
+  },
+  {
+    "Rank": 1,
+    "DateTime": "2025-10-27T01:45:00+02:00",
+    "PriceNoTax": 0.00428,
+    "PriceWithTax": 0.00537
+  },
+  {
+    "Rank": 16,
+    "DateTime": "2025-10-27T02:00:00+02:00",
+    "PriceNoTax": 0.00492,
+    "PriceWithTax": 0.00617
+  },
+  {
+    "Rank": 15,
+    "DateTime": "2025-10-27T02:15:00+02:00",
+    "PriceNoTax": 0.00489,
+    "PriceWithTax": 0.00614
+  },
+  {
+    "Rank": 13,
+    "DateTime": "2025-10-27T02:30:00+02:00",
+    "PriceNoTax": 0.00487,
+    "PriceWithTax": 0.00611
+  },
+  {
+    "Rank": 8,
+    "DateTime": "2025-10-27T02:45:00+02:00",
+    "PriceNoTax": 0.00477,
+    "PriceWithTax": 0.00599
+  },
+  {
+    "Rank": 10,
+    "DateTime": "2025-10-27T03:00:00+02:00",
+    "PriceNoTax": 0.00481,
+    "PriceWithTax": 0.00604
+  },
+  {
+    "Rank": 3,
+    "DateTime": "2025-10-27T03:15:00+02:00",
+    "PriceNoTax": 0.0044,
+    "PriceWithTax": 0.00552
+  },
+  {
+    "Rank": 2,
+    "DateTime": "2025-10-27T03:30:00+02:00",
+    "PriceNoTax": 0.00431,
+    "PriceWithTax": 0.00541
+  },
+  {
+    "Rank": 4,
+    "DateTime": "2025-10-27T03:45:00+02:00",
+    "PriceNoTax": 0.00442,
+    "PriceWithTax": 0.00555
+  },
+  {
+    "Rank": 5,
+    "DateTime": "2025-10-27T04:00:00+02:00",
+    "PriceNoTax": 0.00457,
+    "PriceWithTax": 0.00574
+  },
+  {
+    "Rank": 12,
+    "DateTime": "2025-10-27T04:15:00+02:00",
+    "PriceNoTax": 0.00486,
+    "PriceWithTax": 0.00610
+  },
+  {
+    "Rank": 18,
+    "DateTime": "2025-10-27T04:30:00+02:00",
+    "PriceNoTax": 0.00496,
+    "PriceWithTax": 0.00622
+  },
+  {
+    "Rank": 19,
+    "DateTime": "2025-10-27T04:45:00+02:00",
+    "PriceNoTax": 0.00499,
+    "PriceWithTax": 0.00626
+  },
+  {
+    "Rank": 11,
+    "DateTime": "2025-10-27T05:00:00+02:00",
+    "PriceNoTax": 0.00482,
+    "PriceWithTax": 0.00605
+  },
+  {
+    "Rank": 14,
+    "DateTime": "2025-10-27T05:15:00+02:00",
+    "PriceNoTax": 0.00487,
+    "PriceWithTax": 0.00611
+  },
+  {
+    "Rank": 17,
+    "DateTime": "2025-10-27T05:30:00+02:00",
+    "PriceNoTax": 0.00495,
+    "PriceWithTax": 0.00621
+  },
+  {
+    "Rank": 23,
+    "DateTime": "2025-10-27T05:45:00+02:00",
+    "PriceNoTax": 0.00533,
+    "PriceWithTax": 0.00669
+  },
+  {
+    "Rank": 6,
+    "DateTime": "2025-10-27T06:00:00+02:00",
+    "PriceNoTax": 0.00463,
+    "PriceWithTax": 0.00581
+  },
+  {
+    "Rank": 24,
+    "DateTime": "2025-10-27T06:15:00+02:00",
+    "PriceNoTax": 0.00554,
+    "PriceWithTax": 0.00695
+  },
+  {
+    "Rank": 28,
+    "DateTime": "2025-10-27T06:30:00+02:00",
+    "PriceNoTax": 0.01129,
+    "PriceWithTax": 0.01417
+  },
+  {
+    "Rank": 29,
+    "DateTime": "2025-10-27T06:45:00+02:00",
+    "PriceNoTax": 0.02055,
+    "PriceWithTax": 0.02579
+  },
+  {
+    "Rank": 26,
+    "DateTime": "2025-10-27T07:00:00+02:00",
+    "PriceNoTax": 0.00912,
+    "PriceWithTax": 0.01145
+  },
+  {
+    "Rank": 30,
+    "DateTime": "2025-10-27T07:15:00+02:00",
+    "PriceNoTax": 0.02156,
+    "PriceWithTax": 0.02706
+  },
+  {
+    "Rank": 38,
+    "DateTime": "2025-10-27T07:30:00+02:00",
+    "PriceNoTax": 0.04849,
+    "PriceWithTax": 0.06085
+  },
+  {
+    "Rank": 93,
+    "DateTime": "2025-10-27T07:45:00+02:00",
+    "PriceNoTax": 0.07221,
+    "PriceWithTax": 0.09062
+  },
+  {
+    "Rank": 48,
+    "DateTime": "2025-10-27T08:00:00+02:00",
+    "PriceNoTax": 0.0515,
+    "PriceWithTax": 0.06463
+  },
+  {
+    "Rank": 78,
+    "DateTime": "2025-10-27T08:15:00+02:00",
+    "PriceNoTax": 0.06249,
+    "PriceWithTax": 0.07842
+  },
+  {
+    "Rank": 81,
+    "DateTime": "2025-10-27T08:30:00+02:00",
+    "PriceNoTax": 0.0647,
+    "PriceWithTax": 0.08120
+  },
+  {
+    "Rank": 87,
+    "DateTime": "2025-10-27T08:45:00+02:00",
+    "PriceNoTax": 0.06845,
+    "PriceWithTax": 0.08590
+  },
+  {
+    "Rank": 91,
+    "DateTime": "2025-10-27T09:00:00+02:00",
+    "PriceNoTax": 0.07179,
+    "PriceWithTax": 0.09010
+  },
+  {
+    "Rank": 94,
+    "DateTime": "2025-10-27T09:15:00+02:00",
+    "PriceNoTax": 0.0724,
+    "PriceWithTax": 0.09086
+  },
+  {
+    "Rank": 96,
+    "DateTime": "2025-10-27T09:30:00+02:00",
+    "PriceNoTax": 0.07281,
+    "PriceWithTax": 0.09138
+  },
+  {
+    "Rank": 88,
+    "DateTime": "2025-10-27T09:45:00+02:00",
+    "PriceNoTax": 0.06924,
+    "PriceWithTax": 0.08690
+  },
+  {
+    "Rank": 95,
+    "DateTime": "2025-10-27T10:00:00+02:00",
+    "PriceNoTax": 0.0726,
+    "PriceWithTax": 0.09111
+  },
+  {
+    "Rank": 89,
+    "DateTime": "2025-10-27T10:15:00+02:00",
+    "PriceNoTax": 0.06953,
+    "PriceWithTax": 0.08726
+  },
+  {
+    "Rank": 82,
+    "DateTime": "2025-10-27T10:30:00+02:00",
+    "PriceNoTax": 0.06541,
+    "PriceWithTax": 0.08209
+  },
+  {
+    "Rank": 65,
+    "DateTime": "2025-10-27T10:45:00+02:00",
+    "PriceNoTax": 0.05867,
+    "PriceWithTax": 0.07363
+  },
+  {
+    "Rank": 85,
+    "DateTime": "2025-10-27T11:00:00+02:00",
+    "PriceNoTax": 0.06744,
+    "PriceWithTax": 0.08464
+  },
+  {
+    "Rank": 77,
+    "DateTime": "2025-10-27T11:15:00+02:00",
+    "PriceNoTax": 0.06243,
+    "PriceWithTax": 0.07835
+  },
+  {
+    "Rank": 71,
+    "DateTime": "2025-10-27T11:30:00+02:00",
+    "PriceNoTax": 0.05964,
+    "PriceWithTax": 0.07485
+  },
+  {
+    "Rank": 62,
+    "DateTime": "2025-10-27T11:45:00+02:00",
+    "PriceNoTax": 0.05753,
+    "PriceWithTax": 0.07220
+  },
+  {
+    "Rank": 92,
+    "DateTime": "2025-10-27T12:00:00+02:00",
+    "PriceNoTax": 0.07189,
+    "PriceWithTax": 0.09022
+  },
+  {
+    "Rank": 90,
+    "DateTime": "2025-10-27T12:15:00+02:00",
+    "PriceNoTax": 0.07011,
+    "PriceWithTax": 0.08799
+  },
+  {
+    "Rank": 86,
+    "DateTime": "2025-10-27T12:30:00+02:00",
+    "PriceNoTax": 0.06764,
+    "PriceWithTax": 0.08489
+  },
+  {
+    "Rank": 83,
+    "DateTime": "2025-10-27T12:45:00+02:00",
+    "PriceNoTax": 0.0661,
+    "PriceWithTax": 0.08296
+  },
+  {
+    "Rank": 74,
+    "DateTime": "2025-10-27T13:00:00+02:00",
+    "PriceNoTax": 0.06172,
+    "PriceWithTax": 0.07746
+  },
+  {
+    "Rank": 64,
+    "DateTime": "2025-10-27T13:15:00+02:00",
+    "PriceNoTax": 0.05786,
+    "PriceWithTax": 0.07261
+  },
+  {
+    "Rank": 66,
+    "DateTime": "2025-10-27T13:30:00+02:00",
+    "PriceNoTax": 0.05878,
+    "PriceWithTax": 0.07377
+  },
+  {
+    "Rank": 69,
+    "DateTime": "2025-10-27T13:45:00+02:00",
+    "PriceNoTax": 0.05905,
+    "PriceWithTax": 0.07411
+  },
+  {
+    "Rank": 49,
+    "DateTime": "2025-10-27T14:00:00+02:00",
+    "PriceNoTax": 0.05194,
+    "PriceWithTax": 0.06518
+  },
+  {
+    "Rank": 50,
+    "DateTime": "2025-10-27T14:15:00+02:00",
+    "PriceNoTax": 0.0522,
+    "PriceWithTax": 0.06551
+  },
+  {
+    "Rank": 52,
+    "DateTime": "2025-10-27T14:30:00+02:00",
+    "PriceNoTax": 0.05301,
+    "PriceWithTax": 0.06653
+  },
+  {
+    "Rank": 51,
+    "DateTime": "2025-10-27T14:45:00+02:00",
+    "PriceNoTax": 0.05224,
+    "PriceWithTax": 0.06556
+  },
+  {
+    "Rank": 45,
+    "DateTime": "2025-10-27T15:00:00+02:00",
+    "PriceNoTax": 0.05076,
+    "PriceWithTax": 0.06370
+  },
+  {
+    "Rank": 55,
+    "DateTime": "2025-10-27T15:15:00+02:00",
+    "PriceNoTax": 0.05443,
+    "PriceWithTax": 0.06831
+  },
+  {
+    "Rank": 60,
+    "DateTime": "2025-10-27T15:30:00+02:00",
+    "PriceNoTax": 0.05696,
+    "PriceWithTax": 0.07148
+  },
+  {
+    "Rank": 68,
+    "DateTime": "2025-10-27T15:45:00+02:00",
+    "PriceNoTax": 0.05884,
+    "PriceWithTax": 0.07384
+  },
+  {
+    "Rank": 39,
+    "DateTime": "2025-10-27T16:00:00+02:00",
+    "PriceNoTax": 0.05,
+    "PriceWithTax": 0.06275
+  },
+  {
+    "Rank": 40,
+    "DateTime": "2025-10-27T16:15:00+02:00",
+    "PriceNoTax": 0.05006,
+    "PriceWithTax": 0.06283
+  },
+  {
+    "Rank": 63,
+    "DateTime": "2025-10-27T16:30:00+02:00",
+    "PriceNoTax": 0.05784,
+    "PriceWithTax": 0.07259
+  },
+  {
+    "Rank": 84,
+    "DateTime": "2025-10-27T16:45:00+02:00",
+    "PriceNoTax": 0.06637,
+    "PriceWithTax": 0.08329
+  },
+  {
+    "Rank": 57,
+    "DateTime": "2025-10-27T17:00:00+02:00",
+    "PriceNoTax": 0.05545,
+    "PriceWithTax": 0.06959
+  },
+  {
+    "Rank": 73,
+    "DateTime": "2025-10-27T17:15:00+02:00",
+    "PriceNoTax": 0.06072,
+    "PriceWithTax": 0.07620
+  },
+  {
+    "Rank": 75,
+    "DateTime": "2025-10-27T17:30:00+02:00",
+    "PriceNoTax": 0.0621,
+    "PriceWithTax": 0.07794
+  },
+  {
+    "Rank": 79,
+    "DateTime": "2025-10-27T17:45:00+02:00",
+    "PriceNoTax": 0.06289,
+    "PriceWithTax": 0.07893
+  },
+  {
+    "Rank": 44,
+    "DateTime": "2025-10-27T18:00:00+02:00",
+    "PriceNoTax": 0.05046,
+    "PriceWithTax": 0.06333
+  },
+  {
+    "Rank": 43,
+    "DateTime": "2025-10-27T18:15:00+02:00",
+    "PriceNoTax": 0.05032,
+    "PriceWithTax": 0.06315
+  },
+  {
+    "Rank": 47,
+    "DateTime": "2025-10-27T18:30:00+02:00",
+    "PriceNoTax": 0.05124,
+    "PriceWithTax": 0.06431
+  },
+  {
+    "Rank": 41,
+    "DateTime": "2025-10-27T18:45:00+02:00",
+    "PriceNoTax": 0.05022,
+    "PriceWithTax": 0.06303
+  },
+  {
+    "Rank": 56,
+    "DateTime": "2025-10-27T19:00:00+02:00",
+    "PriceNoTax": 0.05479,
+    "PriceWithTax": 0.06876
+  },
+  {
+    "Rank": 61,
+    "DateTime": "2025-10-27T19:15:00+02:00",
+    "PriceNoTax": 0.05738,
+    "PriceWithTax": 0.07201
+  },
+  {
+    "Rank": 72,
+    "DateTime": "2025-10-27T19:30:00+02:00",
+    "PriceNoTax": 0.05969,
+    "PriceWithTax": 0.07491
+  },
+  {
+    "Rank": 70,
+    "DateTime": "2025-10-27T19:45:00+02:00",
+    "PriceNoTax": 0.0596,
+    "PriceWithTax": 0.07480
+  },
+  {
+    "Rank": 80,
+    "DateTime": "2025-10-27T20:00:00+02:00",
+    "PriceNoTax": 0.06357,
+    "PriceWithTax": 0.07978
+  },
+  {
+    "Rank": 76,
+    "DateTime": "2025-10-27T20:15:00+02:00",
+    "PriceNoTax": 0.06228,
+    "PriceWithTax": 0.07816
+  },
+  {
+    "Rank": 67,
+    "DateTime": "2025-10-27T20:30:00+02:00",
+    "PriceNoTax": 0.05881,
+    "PriceWithTax": 0.07381
+  },
+  {
+    "Rank": 58,
+    "DateTime": "2025-10-27T20:45:00+02:00",
+    "PriceNoTax": 0.05591,
+    "PriceWithTax": 0.07017
+  },
+  {
+    "Rank": 59,
+    "DateTime": "2025-10-27T21:00:00+02:00",
+    "PriceNoTax": 0.05674,
+    "PriceWithTax": 0.07121
+  },
+  {
+    "Rank": 54,
+    "DateTime": "2025-10-27T21:15:00+02:00",
+    "PriceNoTax": 0.05425,
+    "PriceWithTax": 0.06808
+  },
+  {
+    "Rank": 46,
+    "DateTime": "2025-10-27T21:30:00+02:00",
+    "PriceNoTax": 0.05121,
+    "PriceWithTax": 0.06427
+  },
+  {
+    "Rank": 37,
+    "DateTime": "2025-10-27T21:45:00+02:00",
+    "PriceNoTax": 0.04608,
+    "PriceWithTax": 0.05783
+  },
+  {
+    "Rank": 42,
+    "DateTime": "2025-10-27T22:00:00+02:00",
+    "PriceNoTax": 0.05023,
+    "PriceWithTax": 0.06304
+  },
+  {
+    "Rank": 53,
+    "DateTime": "2025-10-27T22:15:00+02:00",
+    "PriceNoTax": 0.05384,
+    "PriceWithTax": 0.06757
+  },
+  {
+    "Rank": 36,
+    "DateTime": "2025-10-27T22:30:00+02:00",
+    "PriceNoTax": 0.04466,
+    "PriceWithTax": 0.05605
+  },
+  {
+    "Rank": 33,
+    "DateTime": "2025-10-27T22:45:00+02:00",
+    "PriceNoTax": 0.03671,
+    "PriceWithTax": 0.04607
+  },
+  {
+    "Rank": 35,
+    "DateTime": "2025-10-27T23:00:00+02:00",
+    "PriceNoTax": 0.04229,
+    "PriceWithTax": 0.05307
+  },
+  {
+    "Rank": 34,
+    "DateTime": "2025-10-27T23:15:00+02:00",
+    "PriceNoTax": 0.04158,
+    "PriceWithTax": 0.05218
+  },
+  {
+    "Rank": 32,
+    "DateTime": "2025-10-27T23:30:00+02:00",
+    "PriceNoTax": 0.0313,
+    "PriceWithTax": 0.03928
+  },
+  {
+    "Rank": 31,
+    "DateTime": "2025-10-27T23:45:00+02:00",
+    "PriceNoTax": 0.02227,
+    "PriceWithTax": 0.02795
+  }
+]
