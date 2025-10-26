@@ -1,0 +1,33 @@
+name: Fetch Latest Spot-Hinta.fi Prices
+
+# Määritellään, milloin tämä ajetaan
+on:
+  # Ajetaan automaattisesti joka tunti
+  schedule:
+    - cron: '0 * * * *'
+  # Lisätään nappi, jolla ajon voi käynnistää manuaalisesti
+  workflow_dispatch:
+
+jobs:
+  fetch-file:
+    runs-on: ubuntu-latest
+    steps:
+      # Vaihe 1: Otetaan tämän repositorion tiedostot käyttöön
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # Vaihe 2: Ladataan data curl-komennolla ja tallennetaan se
+      - name: Fetch spot-hinta.json
+        run: |
+          # -o (output) tallentaa tuloksen tiedostoon 'spot-hinta.json'
+          curl "https://api.spot-hinta.fi/TodayAndDayForward" -o spot-hinta.json
+
+      # Vaihe 3: Tallennetaan ("commit") tiedosto takaisin repositorioon
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add spot-hinta.json
+          # Seuraava rivi tarkistaa, onko tiedostossa muutoksia. Jos ei, mitään ei tehdä.
+          git diff --staged --quiet || git commit -m "Update spot-hinta.json"
+          git push
