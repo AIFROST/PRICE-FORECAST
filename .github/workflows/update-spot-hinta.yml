@@ -1,10 +1,9 @@
 name: Fetch Latest Spot-Hinta.fi Prices
 
-# Määritellään, milloin tämä ajetaan
 on:
-  # Ajetaan automaattisesti joka tunti
+  # Ajetaan automaattisesti joka 15. minuutti
   schedule:
-    - cron: '0 * * * *'
+    - cron: '*/15 * * * *'
   # Lisätään nappi, jolla ajon voi käynnistää manuaalisesti
   workflow_dispatch:
 
@@ -16,11 +15,20 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # Vaihe 2: Ladataan data curl-komennolla ja tallennetaan se
-      - name: Fetch spot-hinta.json
-        run: |
-          # -o (output) tallentaa tuloksen tiedostoon 'spot-hinta.json'
-          curl "https://api.spot-hinta.fi/TodayAndDayForward" -o spot-hinta.json
+      # Vaihe 2: Ladataan data (UUDELLEENYRITYKSELLÄ)
+      - name: Fetch spot-hinta.json (with retry)
+        # Tämä on kolmannen osapuolen toiminto, joka osaa yrittää komentoa uudelleen
+        uses: nick-invision/retry@v2
+        with:
+          # Yritetään enintään 3 kertaa
+          max_attempts: 3
+          # Odotetaan 15 sekuntia yritysten välillä
+          retry_wait_seconds: 15
+          # Komento, jota yritetään ajaa
+          command: |
+            # --fail on tärkeä: se varmistaa, että curl epäonnistuu,
+            # jos API-palvelin palauttaa virheen (esim. 500 tai 404).
+            curl --fail "https://api.spot-hinta.fi/TodayAndDayForward" -o spot-hinta.json
 
       # Vaihe 3: Tallennetaan ("commit") tiedosto takaisin repositorioon
       - name: Commit and push if changed
