@@ -7,6 +7,10 @@ on:
   # Lisätään nappi, jolla ajon voi käynnistää manuaalisesti
   workflow_dispatch:
 
+# Annetaan työnkululle lupa tehdä "git push" eli kirjoittaa repositorioon.
+permissions:
+  contents: write
+
 jobs:
   fetch-file:
     runs-on: ubuntu-latest
@@ -17,7 +21,6 @@ jobs:
 
       # Vaihe 2: Ladataan data (UUDELLEENYRITYKSELLÄ)
       - name: Fetch spot-hinta.json (with retry)
-        # Tämä on kolmannen osapuolen toiminto, joka osaa yrittää komentoa uudelleen
         uses: nick-invision/retry@v2
         with:
           # Yritetään enintään 3 kertaa
@@ -26,8 +29,7 @@ jobs:
           retry_wait_seconds: 15
           # Komento, jota yritetään ajaa
           command: |
-            # --fail on tärkeä: se varmistaa, että curl epäonnistuu,
-            # jos API-palvelin palauttaa virheen (esim. 500 tai 404).
+            # --fail varmistaa, että curl epäonnistuu, jos API palauttaa virheen
             curl --fail "https://api.spot-hinta.fi/TodayAndDayForward" -o spot-hinta.json
 
       # Vaihe 3: Tallennetaan ("commit") tiedosto takaisin repositorioon
@@ -35,7 +37,22 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
+          
+          # Lisätään tiedosto "stage"-tilaan
           git add spot-hinta.json
-          # Seuraava rivi tarkistaa, onko tiedostossa muutoksia. Jos ei, mitään ei tehdä.
-          git diff --staged --quiet || git commit -m "Update spot-hinta.json"
+
+          # Tarkistetaan, onko muutoksia. Jos ei, lopetetaan tähän.
+          if git diff --staged --quiet; then
+            echo "No changes detected, exiting."
+            exit 0
+          fi
+          
+          # Jos muutoksia oli, tehdään commit
+          git commit -m "Update spot-hinta.json"
+
+          # Haetaan uusimmat muutokset GitHubista (rebase)
+          # Tämä estää "(fetch first)" -virheen.
+          git pull --rebase
+          
+          # Työnnetään muutokset takaisin repositorioon
           git push
