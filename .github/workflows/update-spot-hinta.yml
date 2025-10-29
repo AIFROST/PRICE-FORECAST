@@ -1,25 +1,35 @@
 name: Fetch Latest Spot-Hinta.fi Prices
 on:
   schedule:
-    # Run every 15 minutes between 14:00-15:00 Finnish time (12:00-13:00 UTC in winter, 11:00-12:00 UTC in summer)
-    # Note: GitHub Actions uses UTC, Finland is UTC+2 (summer) or UTC+3 (winter with DST)
-    # Using UTC+2 schedule: 12:00-13:00 UTC
-    - cron: '0,15,30,45 12 * * *'  # Winter time (Oct-Mar): 14:00-15:00 EET
-    - cron: '0,15,30,45 11 * * *'  # Summer time (Apr-Sep): 14:00-15:00 EEST
+    # Run every 15 minutes between 11:00–12:59 UTC
+    # This covers 14:00–15:59 Helsinki time year-round (EET/EEST)
+    - cron: '0,15,30,45 11-12 * * *'
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   fetch-file:
     runs-on: ubuntu-latest
     steps:
-      # Vaihe 1: Shallow checkout (faster)
+      # Step 1: Shallow checkout
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1  # Only fetch latest commit
-      
-      # Vaihe 2: Ladataan data (optimized retry)
+          fetch-depth: 1
+
+      # Step 2: Exit early if not 14:00 Helsinki local time
+      - name: Ensure Helsinki local time is 14:00
+        run: |
+          HOUR=$(TZ="Europe/Helsinki" date +%H)
+          echo "Current Helsinki hour: $HOUR"
+          if [ "$HOUR" -ne 14 ]; then
+            echo "⏭ Not 14:00 Helsinki time, exiting."
+            exit 0
+          fi
+
+      # Step 3: Fetch data with retry
       - name: Fetch spot-hinta.json (with retry)
         uses: nick-invision/retry@v3
         with:
@@ -29,49 +39,44 @@ jobs:
           command: |
             curl --fail --connect-timeout 10 --max-time 25 \
               "https://api.spot-hinta.fi/TodayAndDayForward" -o spot-hinta.json
-      
-      # Vaihe 3: Check if prices have updated (tomorrow's data exists)
+
+      # Step 4: Validate JSON
+      - name: Validate JSON
+        run: |
+          if ! jq empty spot-hinta.json; then
+            echo "❌ Invalid JSON received"
+            exit 1
+          fi
+
+      # Step 5: Check if tomorrow's prices are available
       - name: Check if tomorrow's prices are available
         id: check_prices
         run: |
-          # Count how many price entries we have (each day has 96 entries at 15-min intervals)
           PRICE_COUNT=$(jq '. | length' spot-hinta.json)
           echo "Found $PRICE_COUNT price entries"
-          
-          # If we have more than 96 entries, we have tomorrow's data
           if [ "$PRICE_COUNT" -gt 96 ]; then
             echo "has_new_prices=true" >> $GITHUB_OUTPUT
-            echo "✅ Tomorrow's prices are available! ($PRICE_COUNT entries = ~$(($PRICE_COUNT / 96)) days)"
+            echo "✅ Tomorrow's prices are available!"
           else
             echo "has_new_prices=false" >> $GITHUB_OUTPUT
-            echo "⏳ Still waiting for tomorrow's prices... (currently $PRICE_COUNT entries = today only)"
+            echo "⏳ Still waiting for tomorrow's prices..."
           fi
-      
-      # Vaihe 4: Tallennetaan vain jos on muutoksia
+
+      # Step 6: Commit and push if changed
       - name: Commit and push if changed
         if: steps.check_prices.outputs.has_new_prices == 'true'
         run: |
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "actions@github.com"
-          
+
           git add spot-hinta.json
-          
-          # Exit early if no changes
           if git diff --staged --quiet; then
             echo "No changes detected, skipping commit."
             exit 0
           fi
-          
-          git commit -m "Update spot-hinta.json with tomorrow's prices [skip ci]"
-          
-          # Simplified push with retry
+
+          DATE=$(date -d 'tomorrow' +%Y-%m-%d)
+          git commit -m "Update spot-hinta.json with prices for $DATE [skip ci]"
           git push || (git pull --rebase && git push)
-          
+
           echo "✅ Successfully updated with new prices!"
-      
-      # Vaihe 5: Cancel remaining scheduled runs if prices were fetched
-      - name: Cancel workflow runs for today
-        if: steps.check_prices.outputs.has_new_prices == 'true'
-        run: |
-          echo "✅ Prices fetched! Remaining runs today will exit early."
-          # Note: Future runs will still execute but exit early via the check above
