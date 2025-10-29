@@ -1,11 +1,19 @@
+# Name of the workflow
 name: Fetch Latest Spot-Hinta.fi Prices
+
 on:
+  # Trigger the workflow on a schedule
   schedule:
-    # Run every 15 minutes between 11:00–12:59 UTC
-    # This covers 14:00–15:59 Helsinki time year-round (EET/EEST)
+    # Run every 15 minutes (at :00, :15, :30, :45)
+    # between 11:00 and 12:59 UTC.
+    # This covers 14:00–15:59 Helsinki time year-round (EET/EEST),
+    # polling 8 times for the new prices.
     - cron: '0,15,30,45 11-12 * * *'
+  
+  # Allow running this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Grant the workflow permission to write to the repository
 permissions:
   contents: write
 
@@ -13,47 +21,68 @@ jobs:
   fetch-file:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Shallow checkout
+      
+      # Step 1: Check out the repository's code
       - name: Check out repository
         uses: actions/checkout@v4
         with:
+          # Fetches only the latest commit for speed
           fetch-depth: 1
 
-      # Step 2: Exit early if not 14:00 Helsinki local time
-      - name: Ensure Helsinki local time is 14:00
+      # Step 2: Check the time in Helsinki
+      # We poll every 15 mins, but we only want to *run* the fetch
+      # logic during the 14:xx hour when prices are released.
+      - name: Ensure Helsinki local time is 14:xx
+        shell: bash
         run: |
+          # Set the Timezone (TZ) just for this command
           HOUR=$(TZ="Europe/Helsinki" date +%H)
           echo "Current Helsinki hour: $HOUR"
+          
+          # Check if the hour is NOT 14 (e.g., 13 or 15)
           if [ "$HOUR" -ne 14 ]; then
-            echo "⏭ Not 14:00 Helsinki time, exiting."
+            echo "⏭ Not 14:xx Helsinki time, exiting."
+            # Exit the job successfully without running subsequent steps
             exit 0
           fi
+          echo "Current Helsinki hour is 14:xx. Proceeding..."
 
-      # Step 3: Fetch data with retry
+      # Step 3: Fetch the data
+      # This step only runs if the time check in Step 2 passes
       - name: Fetch spot-hinta.json (with retry)
         uses: nick-invision/retry@v3
         with:
           timeout_seconds: 30
           max_attempts: 2
           retry_wait_seconds: 10
+          # Command to download the file from the API
           command: |
             curl --fail --connect-timeout 10 --max-time 25 \
               "https://api.spot-hinta.fi/TodayAndDayForward" -o spot-hinta.json
 
-      # Step 4: Validate JSON
+      # Step 4: Validate the downloaded file
       - name: Validate JSON
+        shell: bash
         run: |
+          # Use jq to check if the file is valid JSON
           if ! jq empty spot-hinta.json; then
             echo "❌ Invalid JSON received"
             exit 1
           fi
+          echo "✅ JSON is valid."
 
-      # Step 5: Check if tomorrow's prices are available
+      # Step 5: Check if the file contains tomorrow's prices
       - name: Check if tomorrow's prices are available
         id: check_prices
+        shell: bash
         run: |
+          # Count the number of entries in the JSON array
           PRICE_COUNT=$(jq '. | length' spot-hinta.json)
           echo "Found $PRICE_COUNT price entries"
+          
+          # This logic assumes a full day of 15-min data has 96 entries (24 * 4).
+          # If the count is > 96, it means tomorrow's 96 entries have been added.
+          # (If your data is hourly, you would change 96 to 24).
           if [ "$PRICE_COUNT" -gt 96 ]; then
             echo "has_new_prices=true" >> $GITHUB_OUTPUT
             echo "✅ Tomorrow's prices are available!"
@@ -62,21 +91,33 @@ jobs:
             echo "⏳ Still waiting for tomorrow's prices..."
           fi
 
-      # Step 6: Commit and push if changed
+      # Step 6: Commit and push the new data
       - name: Commit and push if changed
+        # This step only runs if Step 5 set 'has_new_prices' to 'true'
         if: steps.check_prices.outputs.has_new_prices == 'true'
+        shell: bash
         run: |
+          # Configure git with a bot user
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "actions@github.com"
 
+          # Add the new file to staging
           git add spot-hinta.json
+          
+          # Check if the file has *actually* changed from what's in git
+          # This prevents empty commits if the job runs multiple times
           if git diff --staged --quiet; then
             echo "No changes detected, skipping commit."
             exit 0
           fi
 
+          # Commit the changes
           DATE=$(date -d 'tomorrow' +%Y-%m-%d)
           git commit -m "Update spot-hinta.json with prices for $DATE [skip ci]"
+          
+          # Push the commit.
+          # The `||` logic handles a rare case where the branch was updated
+          # while the job was running. It pulls, rebases, and tries again.
           git push || (git pull --rebase && git push)
 
           echo "✅ Successfully updated with new prices!"
