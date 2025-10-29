@@ -1,0 +1,71 @@
+name: Fetch Vividfog Files (Prediction + Narration)
+on:
+  schedule:
+    # 09:00 Finnish time (EET/EEST)
+    - cron: '0 7 * * *'   # Winter (EET, UTC+2): 09:00 Finnish = 07:00 UTC
+    - cron: '0 6 * * *'   # Summer (EEST, UTC+3): 09:00 Finnish = 06:00 UTC
+    # 15:00 Finnish time (EET/EEST) - after Nord Pool prices update
+    - cron: '0 13 * * *'  # Winter (EET, UTC+2): 15:00 Finnish = 13:00 UTC
+    - cron: '0 12 * * *'  # Summer (EEST, UTC+3): 15:00 Finnish = 12:00 UTC
+    # 21:00 Finnish time (EET/EEST)
+    - cron: '0 19 * * *'  # Winter (EET, UTC+2): 21:00 Finnish = 19:00 UTC
+    - cron: '0 18 * * *'  # Summer (EEST, UTC+3): 21:00 Finnish = 18:00 UTC
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch-files:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Shallow checkout (faster)
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      # 2. Download prediction.json with retry
+      - name: Fetch vividfog-prediction.json
+        uses: nick-invision/retry@v3
+        with:
+          timeout_seconds: 30
+          max_attempts: 2
+          retry_wait_seconds: 10
+          command: |
+            curl --fail --connect-timeout 10 --max-time 25 \
+              "https://raw.githubusercontent.com/vividfog/nordpool-predict-fi/refs/heads/main/deploy/prediction.json" \
+              -o vividfog-prediction.json
+      
+      # 3. Download narration.md with retry
+      - name: Fetch narration.md
+        uses: nick-invision/retry@v3
+        with:
+          timeout_seconds: 30
+          max_attempts: 2
+          retry_wait_seconds: 10
+          command: |
+            curl --fail --connect-timeout 10 --max-time 25 \
+              "https://raw.githubusercontent.com/vividfog/nordpool-predict-fi/main/deploy/narration.md" \
+              -o narration.md
+      
+      # 4. Commit both files if either has changed
+      - name: Commit and push if changed
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          
+          git add vividfog-prediction.json narration.md
+          
+          # Exit early if no changes
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes detected in vividfog files"
+            exit 0
+          fi
+          
+          # Check which files changed
+          CHANGED_FILES=$(git diff --staged --name-only)
+          echo "Changed files: $CHANGED_FILES"
+          
+          git commit -m "Update vividfog files (prediction.json + narration.md) [skip ci]"
+          git push || (git pull --rebase && git push)
+          
+          echo "✅ Successfully updated vividfog files"
