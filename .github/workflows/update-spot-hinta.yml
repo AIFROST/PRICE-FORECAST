@@ -5,10 +5,12 @@ on:
   # Trigger the workflow on a schedule
   schedule:
     # Run every 15 minutes (at :00, :15, :30, :45)
-    # between 11:00 and 12:59 UTC.
-    # This covers 14:00–15:59 Helsinki time year-round (EET/EEST),
-    # polling 8 times for the new prices.
-    - cron: '0,15,30,45 11-12 * * *'
+    # between 11:00 and 14:59 UTC.
+    # This covers:
+    # - Talviaika (EET, UTC+2): 13:00–16:59 Helsinki
+    # - Kesäaika (EEST, UTC+3): 14:00–17:59 Helsinki
+    # Step 2 rajaa niin että ajetaan vain kun Helsinki-aika on 14:xx tai myöhemmin
+    - cron: '0,15,30,45 11-14 * * *'
   
   # Allow running this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,22 +32,21 @@ jobs:
           fetch-depth: 1
 
       # Step 2: Check the time in Helsinki
-      # We poll every 15 mins, but we only want to *run* the fetch
-      # logic during the 14:xx hour when prices are released.
-      - name: Ensure Helsinki local time is 14:xx
+      # Pollataan joka 15. minuutti, mutta haetaan data vain kello 14:00 tai myöhemmin
+      - name: Ensure Helsinki local time is 14:xx or later
         shell: bash
         run: |
           # Set the Timezone (TZ) just for this command
           HOUR=$(TZ="Europe/Helsinki" date +%H)
           echo "Current Helsinki hour: $HOUR"
           
-          # Check if the hour is NOT 14 (e.g., 13 or 15)
-          if [ "$HOUR" -ne 14 ]; then
-            echo "⏭ Not 14:xx Helsinki time, exiting."
+          # Check if the hour is less than 14 (e.g., 13 or earlier)
+          if [ "$HOUR" -lt 14 ]; then
+            echo "⏭ Before 14:00 Helsinki time, exiting."
             # Exit the job successfully without running subsequent steps
             exit 0
           fi
-          echo "Current Helsinki hour is 14:xx. Proceeding..."
+          echo "Current Helsinki hour is $HOUR:xx (>= 14:00). Proceeding..."
 
       # Step 3: Fetch the data
       # This step only runs if the time check in Step 2 passes
@@ -82,7 +83,6 @@ jobs:
           
           # This logic assumes a full day of 15-min data has 96 entries (24 * 4).
           # If the count is > 96, it means tomorrow's 96 entries have been added.
-          # (If your data is hourly, you would change 96 to 24).
           if [ "$PRICE_COUNT" -gt 96 ]; then
             echo "has_new_prices=true" >> $GITHUB_OUTPUT
             echo "✅ Tomorrow's prices are available!"
